@@ -17,7 +17,7 @@ def recommend(movie):
     recommended_movie_names = []
     recommended_movie_posters = []
     for i in distances[1:11]:  # Get top 10 recommendations (excluding the first one)
-        # fetch the movie poster
+        # fetch the movie poster to show
         movie_id = movies.iloc[i[0]].movie_id
         recommended_movie_posters.append(fetch_poster(movie_id))
         recommended_movie_names.append(movies.iloc[i[0]].title)
